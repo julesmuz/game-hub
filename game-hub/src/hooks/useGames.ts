@@ -3,9 +3,10 @@ import apiClient from "../services/api-client";
 import { CanceledError } from "axios";
 
 
-interface Fetched {
+export interface Fetched {
     id: number;
     name: string;
+    background_image:string;
   }
   
   interface FetchProps {
