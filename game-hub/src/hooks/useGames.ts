@@ -10,6 +10,6 @@ export interface PlatformProps {
 
   
 
-const useGames = () => useData<Fetched>('/games'); 
+const useGames = (selectedGenre: Fetched | null) => useData<Fetched>('/games', {params:{genres:selectedGenre?.id}}, [selectedGenre?.id]); 
 
 export default useGames;
