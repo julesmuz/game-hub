@@ -1,5 +1,5 @@
 
-import useData from "./useData";
+import useData, {Fetched} from "./useData";
 
 
 export interface PlatformProps {
@@ -8,13 +8,6 @@ export interface PlatformProps {
     slug: string;
 }
 
-export interface Fetched {
-    id: number;
-    name: string;
-    background_image:string;
-    parent_platforms:{platform: PlatformProps}[]
-    metacritic:number;
-  }
   
 
 const useGames = () => useData<Fetched>('/games'); 

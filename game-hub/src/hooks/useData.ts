@@ -10,6 +10,7 @@ export interface Fetched {
     background_image:string;
     parent_platforms:{platform: PlatformProps}[]
     metacritic:number;
+    image_background: string;
   }
 
 

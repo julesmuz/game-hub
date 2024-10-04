@@ -1,4 +1,4 @@
-import { Fetched } from "../hooks/useGames";
+import { Fetched } from "../hooks/useData";
 import { Card, CardBody, Heading, HStack, Image } from "@chakra-ui/react";
 import PlatformIconList from "./PlatformIconList";
 import CriticScore from "./CriticScore";
