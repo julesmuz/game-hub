@@ -12,7 +12,9 @@ export interface PlatformProps {
   
 
 const useGames = (gameQuery:GameQueryProps) => useData<Fetched>
-('/games', {params:{genres:gameQuery.genre?.id, platforms: gameQuery.platform?.id}},
+('/games', {params:{genres:gameQuery.genre?.id, 
+                    platforms: gameQuery.platform?.id,
+                     ordering: gameQuery.sortOrder}},
      [gameQuery]); 
 
 export default useGames;
