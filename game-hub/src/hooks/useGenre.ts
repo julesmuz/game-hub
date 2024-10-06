@@ -1,4 +1,5 @@
 
+
 import useData, { Fetched } from "./useData";
 
 
@@ -11,6 +12,6 @@ export interface PlatformProps {
 
   
 
-const useGenres = () => useData<Fetched>('/genres'); 
+const useGenres = () => useData<Fetched>('/genres');
 
 export default useGenres;
