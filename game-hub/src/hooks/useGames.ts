@@ -1,4 +1,5 @@
 
+import { GameQueryProps } from "../App";
 import useData, {Fetched} from "./useData";
 
 
@@ -10,6 +11,8 @@ export interface PlatformProps {
 
   
 
-const useGames = (selectedGenre: Fetched | null) => useData<Fetched>('/games', {params:{genres:selectedGenre?.id}}, [selectedGenre?.id]); 
+const useGames = (gameQuery:GameQueryProps) => useData<Fetched>
+('/games', {params:{genres:gameQuery.genre?.id, platforms: gameQuery.platform?.id}},
+     [gameQuery]); 
 
 export default useGames;
